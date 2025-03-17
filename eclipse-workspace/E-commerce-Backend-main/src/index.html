@@ -1,6 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple webpage demonstrating the use of the kbd element for keyboard input.">
+    <meta name="author" content="Disha Naikwadi">
+    <title>Keyboard Input Example</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,35 +16,63 @@
 
         h2 {
             color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         p {
             font-size: 18px;
             color: #555;
+            margin: 10px 0;
         }
 
         kbd {
             background-color: #333;
             color: #fff;
-            padding: 4px 8px;
-            border-radius: 4px;
+            padding: 6px 10px;
+            border-radius: 6px;
             font-weight: bold;
             font-family: monospace;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
 
-<h2>The kbd Element</h2>
+<h2 title="HTML Keyboard Element">The kbd Element</h2>
 
-<p>The kbd element is used to define keyboard input:</p>
+<p>The <kbd title="Keyboard Input">kbd</kbd> element is used to define keyboard input:</p>
 
-<p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+<p>Save the document by pressing <abbr title="Control plus S"> <kbd>Ctrl + S</kbd> </abbr></p>
 
-<p>Hello! I am Disha Naikwadi</p>
-<p>Hii I am there</p>
+<p class="highlight">Hello! I am <strong>Disha Naikwadi</strong></p>
+<p><em>Hi, I am here!</em></p>
+<p>Sorry for the interruption.</p>
 
-    <p>Sorry for Intruption</p>
+<button onclick="alert('Hello, Disha!')">Click Me</button>
 
 </body>
 </html>
